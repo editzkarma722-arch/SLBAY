@@ -1,26 +1,44 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Citadel Prime</title>
   <link rel="icon" type="image/png" href="/citadel-favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    iframe {
+      display: block;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
+
 <body>
-  <iframe 
-    src="https://script.google.com/a/*/macros/s/AKfycby9ICb_k5aKwmjTlObxzLz5j4o6vVrevbefbjvg8r9_yT87615g9uzs8_UPVhNp5PklWA/exec"
-    width="100%"
-    height="100%"
-    allowfullscreen="true"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+
+  <iframe
+    src="https://script.google.com/macros/s/AKfycby9ICb_k5aKwmjTlObxzLz5j4o6vVrevbefbjvg8r9_yT87615g9uzs8_UPVhNp5PklWA/exec"
+    allow="fullscreen"
+    allowfullscreen>
   </iframe>
 
-  <script>
-    window.onload = function() {
-      document.querySelector('iframe')
-        .requestFullscreen()
-        .catch((err) => {
-          console.error('Error attempting to enable full-screen mode:', err.message);
-        });
-    };
-  </script>
 </body>
 </html>
